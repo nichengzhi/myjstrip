@@ -19,17 +19,14 @@ function loadData() {
 
 
     // load streetview
-    var streetviewurl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location='+address+'&key=AIzaSyDVCtwjR02QH3eewbBwJe8in3VX_CCc1h0';
-
-    //var streetviewurl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location={0}&key=AIzaSyDVCtwjR02QH3eewbBwJe8in3VX_CCc1h0'.format(address);
-
-    
+    var streetviewurl = 'http://maps.googleapis.com/maps/api/streetview?size=600x400&location='+address+'google key';
+   
     // YOUR CODE GOES HERE! http://lorempixel.com/350/150/animals/
     //$body.append('<img class="bgimg" src="http://lorempixel.com/350/150/animals/">');
     $body.append('<img class="bgimg" src="'+ streetviewurl + '">');
 
     //news part
-    var newsurl = 'https://newsapi.org/v2/everything?q='+ citystr +'&apiKey=6a7d03b8ad9c497189fb67c4b4939edf'
+    var newsurl = 'https://newsapi.org/v2/everything?q='+ citystr +'news key'
     $.getJSON(newsurl, function(data){
         $nytHeaderElem.text('news about ' + citystr);
         articles = data.articles;
